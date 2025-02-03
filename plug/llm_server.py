@@ -5,8 +5,8 @@ import os
 
 app = Flask(__name__)
 
-# Set your Hugging Face API key
-os.environ["myplug"] = "hf_xjHxWCkX0nHkIMQCRXnpRGMHMN0oHnFySg"
+# Use environment variable for Hugging Face API key
+HF_API_KEY = os.getenv("HF_API_KEY")  # Access environment variable
 
 # Load LLM from Hugging Face
 llm = HuggingFaceHub(
