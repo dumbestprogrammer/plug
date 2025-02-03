@@ -3,3 +3,4 @@ flask
 requests
 transformers
 huggingface_hub
+gunicorn
