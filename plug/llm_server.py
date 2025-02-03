@@ -11,7 +11,8 @@ HF_API_KEY = os.getenv("HF_API_KEY")  # Access environment variable
 # Load LLM from Hugging Face
 llm = HuggingFaceHub(
     repo_id="codellama/CodeLlama-7b-Instruct-hf",  # Code Llama 7B Instruct model
-    model_kwargs={"temperature": 0.5, "max_length": 512}
+    model_kwargs={"temperature": 0.5, "max_length": 512},
+    api_key=HF_API_KEY  # Pass the token to the HuggingFaceHub
 )
 
 
